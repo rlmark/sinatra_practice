@@ -1,13 +1,21 @@
-<h1>Hello world!</h1>
+<div class="avatar">
+
+</div>
 
 <div>
 
-  <p>Today is <%= Time.now.month%>, <%= Time.now.day%>, <%= Time.now.year%> </p>
-
+  <p>Today is <%= Time.now.month%>-<%= Time.now.day%>-<%= Time.now.year%> </p>
   <p>The current time is <%= Time.now.hour %>:<%= Time.now.min %></p>
-
   <p>Try a link <a href="/about-me">here</a>.
   <p>Fluffy cute animals <a href="/cute-pictures-of-animals">here</a>.
   <p><a href="/posts/post1">Week One Blog</a></p>
   <p><a href="/posts/post2">Week Two Blog</a></p>
+
+  <div id="blogposts">
+    <% @reader.files %>
+    <% @reader.files.each do |file| %>
+       <a href="<%= file %>">Check</a>
+    <% end %>
+  </div>
+
 </div>

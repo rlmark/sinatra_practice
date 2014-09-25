@@ -1,0 +1,123 @@
+/********* LAYOUT.ERB **********/
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+header {
+  background-color: #26B29D;
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+
+#bigtext {
+  position: absolute;
+  top: 30%;
+  right: 25%;
+  left: 25%;
+  width: 50%;
+}
+
+footer {
+  background-color: #FF8958;
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding-top: 0.75em;
+}
+
+footer img {
+  padding-left: 2em;
+}
+
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.75em 0;
+}
+
+#navbar ul li {
+  display: inline;
+}
+
+#navbar ul li a {
+  padding: 0 2em;
+  color: white;
+  font-size: 1.1em;
+}
+
+#navbar ul li a:hover {
+  text-shadow: 0 0 2px white;
+}
+
+.container {
+  margin: 0;
+  padding: 2em;
+}
+
+/********* GENERAL PAGES **********/
+
+p {
+  font-family: 'Raleway', sans-serif;
+  line-height: 21px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 2em;
+  margin: 0;
+  padding: 4px;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 0.15em;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: gray;
+    text-align: center;
+    font-size: 1.45em;
+    margin: 0;
+    padding: 2px;
+}
+
+h3 {
+    color: #999;
+    font-size: 1.25em;
+}
+
+h4 {
+  color: white;
+  text-align: center;
+  font: normal;
+  font-size: 1.5em;
+}
+
+img {
+    /*border-style: dashed;
+    border-width: 2px;
+    border-color: #ccc;*/
+}
+
+a {
+    text-decoration: none;
+}
+
+strong {
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+table {
+    background-color: #ccc;
+}

@@ -5,8 +5,9 @@ class MyApp < Sinatra::Base
 
   # if you want to make @ post avail to all route handlers,
   before do
-    @post = Post.all
-    puts @pos.inspect
+    # @posts = Post.all
+    @posts = Post.most_recent(5)
+
   end
 
   get "/" do
@@ -25,7 +26,7 @@ class MyApp < Sinatra::Base
 # two options. find in array of all posts for title.
 
   get "/posts/:blogpost" do
-    post = @post.find {|post| post.title == params[:blogpost]}
+    post = @posts.find {|post| post.title == params[:blogpost]}
     erb :"posts/#{post.date}/#{post.title}"
   end
 

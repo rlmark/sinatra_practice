@@ -3,20 +3,18 @@
 </div>
 
 <div class = "col1">
-  <p>Today is <%= Time.now.month%>-<%= Time.now.day%>-<%= Time.now.year%> </p>
-  <p>The current time is <%= Time.now.hour %>:<%= Time.now.min %></p>
-  <p>Try a link <a href="/about-me">here</a>.
-  <p>Fluffy cute animals <a href="/cute-pictures-of-animals">here</a>.
-  <p><a href="/posts/post1">Week One Blog</a></p>
-  <p><a href="/posts/post2">Week Two Blog</a></p>
+
+  <% @posts.each do |post| %>
+    <%= post.content %>
+  <% end %>
+
 </div>
 
 <div class="blogposts">
-  <h3>Blog Posts</h3>
+  <h3>Recent Blog Posts</h3>
   <ul>
-    <% @post.each do |post| %>
-       <li><a href="<%= post.url %>"><%= post.title %></a></li>
-       <!-- <%# link_to( "#{post.title}", "#{post.url}", :title => "#{post.title}", :date => "#{post.date}")%> -->
+    <% @posts.each do |post| %>
+       <li><a href="<%= post.url %>"><%= post.title %> ----- <%= post.date %> </a></li>
     <% end %>
   </ul>
 </div>

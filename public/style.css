@@ -7,6 +7,7 @@ body {
   background-color: white;
   margin: 0;
   padding: 0;
+  padding-bottom: 8%;
   /*position: relative;*/
 }
 
@@ -25,21 +26,21 @@ footer {
   background-color: #FF8958;
   height: 30px;
   width: 100%;
-  /*position: absolute;
-  bottom: 0;*/
+  position: fixed;
+  bottom: 0;
   padding-top: 0.75em;
   display: block;
   clear: both;
 }
 
 footer img {
-  padding-left: 2em;
+  padding-left: 2%;
 }
 
 #navbar ul {
   list-style: none;
   margin: 0;
-  padding: 0.75em 2em;
+  padding: 0.75em 0;
 }
 
 #navbar ul li {
@@ -121,8 +122,9 @@ strong {
 
 div.col1 {
   float: left;
-  width: 55%;
-  height: 70%;
+  width: 65%;
+  height: 100%;
+  padding
 }
 
 div.blogposts {

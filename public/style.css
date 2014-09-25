@@ -7,32 +7,29 @@ body {
   background-color: white;
   margin: 0;
   padding: 0;
-  padding-bottom: 40px;
-  position: relative;
+  /*position: relative;*/
 }
 
 header {
-  background-color: #26B29D;
+  background-color: #00C3A5;
   width: 100%;
   height: 250px;
-  position: relative;
+  /*position: relative;*/
 }
 
 #bigtext {
-  position: absolute;
-  top: 30%;
-  right: 25%;
-  left: 25%;
-  width: 50%;
+  margin: 35 auto;
 }
 
 footer {
   background-color: #FF8958;
   height: 30px;
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  /*position: absolute;
+  bottom: 0;*/
   padding-top: 0.75em;
+  display: block;
+  clear: both;
 }
 
 footer img {
@@ -42,7 +39,7 @@ footer img {
 #navbar ul {
   list-style: none;
   margin: 0;
-  padding: 0.75em 0;
+  padding: 0.75em 2em;
 }
 
 #navbar ul li {
@@ -56,13 +53,14 @@ footer img {
 }
 
 #navbar ul li a:hover {
-  text-shadow: 0 0 2px white;
+  text-shadow: 0 0 5px white;
 }
 
 .container {
   margin: 0;
-  padding: 2em;
+  padding: 0 4%;
 }
+
 
 /********* GENERAL PAGES **********/
 
@@ -74,9 +72,10 @@ p {
 h1 {
   font-family: 'Playfair Display', serif;
   color: white;
-  font-size: 2em;
+  font-size: 2.6em;
   margin: 0;
-  padding: 4px;
+  padding: 3px;
+  padding-bottom: 0;
   font-style: normal;
   text-align: center;
   letter-spacing: 0.15em;
@@ -87,7 +86,7 @@ h2 {
     color: gray;
     text-align: center;
     font-size: 1.45em;
-    margin: 0;
+    margin: 2% 0 0 0;
     padding: 2px;
 }
 
@@ -99,14 +98,9 @@ h3 {
 h4 {
   color: white;
   text-align: center;
-  font: normal;
-  font-size: 1.5em;
-}
-
-img {
-    /*border-style: dashed;
-    border-width: 2px;
-    border-color: #ccc;*/
+  font-weight: normal;
+  font-size: 1.25em;
+  margin-top: 0.5em;
 }
 
 a {
@@ -118,6 +112,44 @@ strong {
     text-transform: uppercase;
 }
 
-table {
-    background-color: #ccc;
+/********* HOME PAGE **********/
+
+.avatar img {
+  border-radius: 100%;
+  margin-top: -50px;
+}
+
+div.col1 {
+  float: left;
+  width: 55%;
+  height: 70%;
+}
+
+div.blogposts {
+  width: 30%;
+  background-color: #F1F1F1;
+  padding-bottom: 1em;
+  /*position: absolute;
+  top: 2%;
+  right: 2%;*/
+  float: right;
+
+  }
+
+.blogposts h3 {
+  background-color: #C30062;
+  color: white;
+  text-align: center;
+  padding: 0.25em;
+  margin: 0;
+}
+
+.blogposts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blogposts li {
+  padding: 1em 1em 0 1em;
 }

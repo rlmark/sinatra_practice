@@ -3,15 +3,13 @@ require './lib/Reader'
 
 class MyApp < Sinatra::Base
 
+  # if you want to make @ post avail to all route handlers,
+  before do
+    @post = Post.all
+  end
+
   get "/" do
-
-    # Gets all files, sets to an instance variable to use in erb
-    @reader = Reader.new
-    @reader.file_finder
-    @reader.files
-
-    # @reader.post_namer
-    # @reader.names
+    # Gets all post objects, sets to an instance variable to use in erb
     erb :index
   end
 

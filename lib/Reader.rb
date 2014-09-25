@@ -1,16 +1,19 @@
 # Goal: Reader reads the views/posts files
-class Reader
-  attr_accessor :files, :names
+class Post
+  attr_accessor :title, :url
 
   # Step 1: collect all file names in an array
-  def file_finder
-    @files = Dir["views/posts/*"]
-    @files = @files.collect {|file| file[5..-5]}
+
+  def self.all
+    Dir.glob("views/posts/*").collect do |filepath|
+      a = filepath.split("/")
+      self.new(a)
+    end
   end
 
-  # def post_namer
-  #   @names = (1..@files.count).collect do |num|
-  #     #"post #{num}"
-  #   end
-  # end
+  def initialize(array)
+    @title = array[-1].split(".")[0]
+    @url = "/posts/#{@title}"
+  end
+
 end

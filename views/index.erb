@@ -2,8 +2,6 @@
   <img src="headshot.jpg" alt="avatar" height="100" width="70"/>
 </div>
 
-<!-- <div> -->
-
 <div class = "col1">
   <p>Today is <%= Time.now.month%>-<%= Time.now.day%>-<%= Time.now.year%> </p>
   <p>The current time is <%= Time.now.hour %>:<%= Time.now.min %></p>
@@ -18,8 +16,7 @@
   <ul>
     <% @post.each do |post| %>
        <li><a href="<%= post.url %>"><%= post.title %></a></li>
+       <!-- <%# link_to( "#{post.title}", "#{post.url}", :title => "#{post.title}", :date => "#{post.date}")%> -->
     <% end %>
   </ul>
 </div>
-
-<!-- </div> -->

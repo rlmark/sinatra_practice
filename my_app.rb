@@ -6,6 +6,7 @@ class MyApp < Sinatra::Base
   # if you want to make @ post avail to all route handlers,
   before do
     @post = Post.all
+    puts @pos.inspect
   end
 
   get "/" do
@@ -21,9 +22,11 @@ class MyApp < Sinatra::Base
     erb :cute_pictures_of_animals
   end
 
+# two options. find in array of all posts for title.
+
   get "/posts/:blogpost" do
-    post = params[:blogpost]
-    erb :"posts/#{post}"
+    post = @post.find {|post| post.title == params[:blogpost]}
+    erb :"posts/#{post.date}/#{post.title}"
   end
 
 end

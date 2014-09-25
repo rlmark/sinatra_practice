@@ -1,11 +1,9 @@
 # Goal: Reader reads the views/posts files
 class Post
-  attr_accessor :title, :url
-
-  # Step 1: collect all file names in an array
+  attr_accessor :title, :url, :date
 
   def self.all
-    Dir.glob("views/posts/*").collect do |filepath|
+    Dir.glob("views/posts/*/*").collect do |filepath|
       a = filepath.split("/")
       self.new(a)
     end
@@ -13,6 +11,7 @@ class Post
 
   def initialize(array)
     @title = array[-1].split(".")[0]
+    @date = array[-2]
     @url = "/posts/#{@title}"
   end
 

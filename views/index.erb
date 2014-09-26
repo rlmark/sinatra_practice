@@ -1,20 +1,19 @@
 <div class="avatar">
-  <img src="headshot.jpg" alt="avatar" height="100" width="70"/>
+  <img src="headshot.jpg" alt="avatar"/>
 </div>
 
 <div class = "col1">
+  <div class="blogposts">
+    <h3>Recent Blog Posts</h3>
+    <ul>
+      <% @posts.each do |post| %>
+         <li><a href="<%= post.url %>">
+           <%= post.title %> <span class="postdate"><%= post.date %> </span></a></li>
+      <% end %>
+    </ul>
+  </div>
 
   <% @posts.each do |post| %>
     <%= post.content %>
   <% end %>
-
-</div>
-
-<div class="blogposts">
-  <h3>Recent Blog Posts</h3>
-  <ul>
-    <% @posts.each do |post| %>
-       <li><a href="<%= post.url %>"><%= post.title %> ----- <%= post.date %> </a></li>
-    <% end %>
-  </ul>
 </div>

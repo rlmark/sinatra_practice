@@ -16,8 +16,13 @@
     </div>
 
     <div id ="bigtext">
-      <h1><%= Time.now.day - Time.strptime("09/02/2014", "%m/%d/%Y").day %></h1>
-      <h4>days since Rebecca started at Ada Developers Academy</h4>
+      <h1><%= @time.weeks %> . <%= @time.days %> . <%= @time.hours %> </h1>
+      <h4><ul>
+        <li>weeks</li>
+        <li>days</li>
+        <li>hours</li>
+      </ul></h4>
+      <h4> since Rebecca started at Ada Developers Academy</h4>
     </div>
 
   </header>

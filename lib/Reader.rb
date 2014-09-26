@@ -1,3 +1,4 @@
+require 'time'
 # Goal: Reader reads the views/posts files
 class Post
   attr_accessor :title, :url, :date, :last_n_posts, :content
@@ -22,7 +23,55 @@ class Post
     # 1. This is all post objects sorted by date.
     posts = all.sort_by { |post| post.date }
     # 2. This is first nth post objects.
-    @last_n_posts = posts[0...n]
+    last_n_posts = posts[n-n...n]
+    # next_n_posts = posts[n...n + n]
   end
 
+
+  def self.page_back(n)
+    posts = all.sort_by {|post| post.date }
+
+  end
+
+
+# make a new method, take a page argument, page * 5 - n = start of range,
+
+# in block, create new parameter. Could also have this as part of query string.
+# add query string to end of page, then get page number out of params.
+
+
+# have another  method, taking 2 arguments, one being how many pages, second being which page it's on.
+
+# multiply n by page number, find the range
+
+  # I have an array of post objects with content,
+  # I want to display first 5 on the home page,
+  # When user hits "back" I want the next 5 to load.
+  # From there, when user hits forward, page will display next 5.
+
+
+end
+
+
+class Counter
+  attr_accessor :minutes, :days, :weeks, :hours
+
+  def self.all
+    secs = Time.now - Time.parse("02/09/2014 09:00:00 -0700")
+    self.new(secs)
+  end
+
+  def initialize(timediff)
+    # puts "Original time in seconds #{timediff}"
+    @minutes, @seconds = timediff.divmod(60)
+    @hours, @minutes = @minutes.divmod(60)
+    @days, @hours = @hours.divmod(24)
+    @weeks, @days = @days.divmod(7)
+
+    # puts "weeks #{@weeks}"
+    # puts "days #{@days}"
+    # puts "hours #{@hours}"
+    # puts "minutes #{@minutes}"
+    # puts "seconds #{@seconds}"
+  end
 end

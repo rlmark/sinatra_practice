@@ -7,11 +7,10 @@ class MyApp < Sinatra::Base
   before do
     # @posts = Post.all
     @posts = Post.most_recent(5)
-
+    @time = Counter.all
   end
 
   get "/" do
-    # Gets all post objects, sets to an instance variable to use in erb
     erb :index
   end
 
@@ -21,6 +20,12 @@ class MyApp < Sinatra::Base
 
   get "/cute-pictures-of-animals" do
     erb :cute_pictures_of_animals
+  end
+
+  ### FOR THE SAKE OF PRACTICE
+  post "/cute-pictures-of-animals" do
+    #erb :cute_pictures_of_animals
+    redirect to("/")
   end
 
 # two options. find in array of all posts for title.

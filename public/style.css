@@ -1,4 +1,6 @@
-/********* LAYOUT.ERB **********/
+/*******************************/
+/*         LAYOUT.ERB          */
+/*******************************/
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -14,28 +16,34 @@ body {
 header {
   background-color: #00C3A5;
   width: 100%;
-  height: 325px;
+  height: 350px;
   /*position: relative;*/
 }
 
-#bigtext {
+.bigtext {
   margin: 35 auto;
 }
 
-#bigtext h1 {
-  margin-top: -55px;
-  font-size: 10em;
+.bigtext h1 {
+  font-size: 6em;
+  margin-top: 40px;
 }
 
-#bigtext h4 {
+
+.bigtext h4 {
   margin: 0;
 }
 
-#bigtext li {
-  margin: 0 auto;
+.bigtext li {
+  /*margin: 0 auto;*/
   display: inline-block;
-  padding: 0 100px;
+  padding: 0 5%;
   font: 1.2em;
+}
+
+.bigtext h1 ul {
+  padding: 0 5%;
+  margin: 0 2%;
 }
 
 footer {
@@ -78,8 +86,10 @@ header ul li a:hover {
   padding: 0 8%;
 }
 
+/**********************************/
+/*         GENERAL PAGES          */
+/**********************************/
 
-/********* GENERAL PAGES **********/
 
 p {
   font-family: 'Raleway', sans-serif;
@@ -127,16 +137,15 @@ strong {
     text-transform: uppercase;
 }
 
-/********* HOME/INDEX PAGE **********/
-
-.wrapper {
-}
+/************************************/
+/*         HOME/INDEX PAGE          */
+/************************************/
 
 .avatar img {
   border-radius: 50%;
-  margin-top: -125px;
-  height: 200px;
-  width: 140px;
+  margin-top: -110px;
+  height: 150px;
+  width: 150px;
   border: 10px solid white;
   float: left;
 }

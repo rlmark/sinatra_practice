@@ -1,5 +1,5 @@
 <div class="avatar">
-  <img src="headshot.jpg" alt="avatar"/>
+  <img src="headshotsqr.jpg" alt="avatar"/>
 </div>
 
 <div class = "col1">
@@ -8,7 +8,8 @@
     <ul>
       <% @posts.each do |post| %>
          <li><a href="<%= post.url %>">
-           <%= post.title %> <span class="postdate"><%= post.date %> </span></a></li>
+           <%= post.title.capitalize.gsub("Post", "Post ") %>
+           <span class="postdate"><%= post.date %> </span></a></li>
       <% end %>
     </ul>
   </div>
@@ -16,4 +17,7 @@
   <% @posts.each do |post| %>
     <%= post.content %>
   <% end %>
+
+  <p>next</p>
+  <p>back</p>
 </div>

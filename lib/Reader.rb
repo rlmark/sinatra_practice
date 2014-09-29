@@ -29,6 +29,7 @@ class Post
 
 
   def self.page_back(n)
+
     posts = all.sort_by {|post| post.date }
 
   end

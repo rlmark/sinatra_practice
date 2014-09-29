@@ -19,11 +19,26 @@
       </div>
 
       <div class ="bigtext"> <!--Counter and large text-->
-        <h1>
+        <div class = "col">
+          <h1><%= @time.weeks %></h1>
+          <h4>weeks</h4>
+        </div>
+
+        <div class = "col">
+          <h1><%= @time.days %></h1>
+          <h4>days</h4>
+        </div>
+
+        <div class = "col">
+          <h1><%= @time.hours %></h1>
+          <h4>hours</h4>
+        </div>
+        <h4> since Rebecca started at Ada Developers Academy</h4>
+        <!-- <h1>
           <ul>
-            <li>{<%= @time.weeks %></li>
-            <li><%= @time.days %></li>
-            <li><%= @time.hours %>}</li>
+            <li>{<%#= @time.weeks %></li>
+            <li><%#= @time.days %></li>
+            <li><%#= @time.hours %>}</li>
           </ul>
         </h1>
         <h4><ul>
@@ -31,7 +46,7 @@
           <li>days</li>
           <li>hours</li>
         </ul></h4>
-        <h4> since Rebecca started at Ada Developers Academy</h4>
+        <h4> since Rebecca started at Ada Developers Academy</h4> -->
       </div>
 
     </header>

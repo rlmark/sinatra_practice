@@ -29,9 +29,9 @@ class Post
 
 
   def self.page_back(n)
-
+    range_start = page * n - n
     posts = all.sort_by {|post| post.date }
-
+    
   end
 
 

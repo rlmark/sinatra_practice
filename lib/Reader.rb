@@ -23,15 +23,14 @@ class Post
     # 1. This is all post objects sorted by date.
     posts = all.sort_by { |post| post.date }
     # 2. This is first nth post objects.
-    last_n_posts = posts[n-n...n]
+    last_n_posts = posts[n-n...n].reverse
     # next_n_posts = posts[n...n + n]
   end
 
-
-  def self.page_back(n)
+  def self.page_back(n, page)
     range_start = page * n - n
-    posts = all.sort_by {|post| post.date }
-    
+    posts = all.sort_by { |post| post.date }
+
   end
 
 

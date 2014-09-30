@@ -10,19 +10,18 @@ body {
   margin: 0;
   padding: 0;
   padding-bottom: 8%;
-  /*position: relative;*/
 }
 
 header {
-  background-color: #00C3A5;
+  /*background-color: #00C3A5;*/
+  background: radial-gradient(circle at 2.01% 24.08%, #5aafc4, transparent 77%),radial-gradient(circle at 34.28% 88.13%, #1da369, transparent 100%),radial-gradient(circle at 83.82% 10.7%, #1d9186, transparent 100%),radial-gradient(circle at 50% 50%, #ffffff, #ffffff 100%);
   width: 100%;
   height: 360px;
-  /*position: relative;*/
 }
 
 .bigtext {
-  margin: 35 auto;
   text-align: center;
+  margin: 35 auto;
 }
 
 .col {
@@ -42,27 +41,8 @@ header {
   padding-bottom: 0.75em;
 }
 
-/*.bigtext li {
-  /*margin: 0 auto;*/
-  /*display: inline-block;
-  padding: 0 5%;
-  font: 1.2em;
-}*/
-
-/*.bigtext h1 ul {
-  padding: 0 5%;
-  margin: 0 2%;
-}*/
-
-
-
-/*.mcol {
-  display: inline;
-}
-
-.rcol{
-  display: inline;
-}*/
+/********/
+/*Footer*/
 
 footer {
   background-color: #FF8958;
@@ -75,9 +55,25 @@ footer {
   clear: both;
 }
 
-footer img {
-  padding-left: 2%;
+.to_top {
+  display: block;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  text_align: center;
+  padding: 5px;
+  margin: 0 auto;
+  margin-top: -55px;
+  background-color: #FF8958;
 }
+
+footer a {
+  color: white;
+  margin-left: 7%;
+}
+
+/********/
+/*Navbar*/
 
 header ul {
   list-style: none;
@@ -98,6 +94,9 @@ header ul li a {
 header ul li a:hover {
   text-shadow: 0 0 5px white;
 }
+
+/****************/
+/*All pages body*/
 
 .container {
   margin: 0;

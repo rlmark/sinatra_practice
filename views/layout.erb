@@ -8,7 +8,7 @@
     <title>Rebecca's Blog</title>
   </head>
   <body>
-    <header> <!--Header-->
+    <header id="top"> <!--Header-->
 
       <nav> <!--Navigation-->
         <ul>
@@ -18,22 +18,22 @@
         </ul>
       </nav>
 
-      <div class ="bigtext"> <!--Counter and large text-->
-        <div class = "col">
+      <div class="bigtext"> <!--Counter and large text-->
+        <div class="col">
           <h1><%= @time.weeks %></h1>
           <h4>weeks</h4>
         </div>
 
-        <div class = "col">
+        <div class="col">
           <h1><%= @time.days %></h1>
           <h4>days</h4>
         </div>
 
-        <div class = "col">
+        <div class="col">
           <h1><%= @time.hours %></h1>
           <h4>hours</h4>
         </div>
-        <h4> since Rebecca started at Ada Developers Academy</h4>
+        <h4 class="tagline"> since Rebecca started at Ada Developers Academy</h4>
       </div>
 
     </header>
@@ -44,7 +44,7 @@
 
     <footer> <!--Footer-->
       <a href="https://twitter.com/r_l_mark"><img src="https://g.twimg.com/Twitter_logo_white.png" alt="twitter" height="20" width="20"/></a>
-      <a href ="/" alt="back to top" class="to_top"><img src="/uparrow.png"/></a>
+      <a href ="#top" alt="back to top" class="to_top"><img src="/uparrow.png"/></a>
     </footer>
   </body>
 </html>

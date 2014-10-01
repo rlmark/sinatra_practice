@@ -28,8 +28,6 @@ class MyApp < Sinatra::Base
     redirect to("/")
   end
 
-# two options. find in array of all posts for title.
-
   get "/posts/:blogpost" do
     post = @posts.find {|post| post.title == params[:blogpost]}
     erb :"posts/#{post.date}/#{post.title}"

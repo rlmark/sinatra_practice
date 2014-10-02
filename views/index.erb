@@ -4,19 +4,23 @@
 
 <div class = "col1">
   <div class="blogposts">
-    <h1>Recent Blog Posts</h1>
+    <div class="largename">
+      <h1>Recent Blog Posts</h1>
+    </div>
     <ul>
       <% @posts.each do |post| %>
          <li><a href="<%= post.url %>">
+           <img src="<%= post.icon %>" alt="post icon" class = "icon"/>
            <%= post.title.capitalize.gsub("Post", "Post ") %>
-           <span class="postdate"><%= post.date %> </span></a></li>
+           <span class="postdate"><%= post.date %> </span>
+          </a></li>
       <% end %>
     </ul>
 
     <div class="downbutton">
       <a href="#"><img src="/downarrow.png" alt="scrolldown"/></a>
     </div>
-    
+
   </div>
 
   <% @posts.each do |post| %>

@@ -1,11 +1,10 @@
 require 'time'
 # Goal: Reader reads the views/posts files
 class Post
-  attr_accessor :title, :url, :date, :last_n_posts, :content
+  attr_accessor :title, :url, :date, :last_n_posts, :content, :icon
 
   def self.all
     Dir.glob("views/posts/*/*").collect do |filepath|
-      puts filepath
       c = File.read(filepath)
       a = filepath.split("/")
       self.new(a, c)
@@ -17,6 +16,7 @@ class Post
     @date = array[-2]
     @url = "/posts/#{@title}"
     @content = content
+    @icon = /\/icons\/.*png|jpg|gif|jpeg/.match(content).to_s
   end
 
   def self.most_recent(n)
@@ -25,6 +25,10 @@ class Post
     # 2. This is first nth post objects.
     recent_n_posts = posts[n-n...n]#.reverse
   end
+end
+
+
+
 
 #this makes an array of arrays, each is a array object of desired grouping of  post objects
   # def self.pages(n)
@@ -52,7 +56,6 @@ class Post
   # From there, when user hits forward, page will display next 5.
 
 
-end
 
 
 class Counter

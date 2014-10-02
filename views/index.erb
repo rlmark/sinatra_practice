@@ -1,10 +1,10 @@
-<div class="avatar">
+<!-- <div class="avatar">
   <img src="headshotsqr.jpg" alt="avatar"/>
-</div>
+</div> -->
 
 <div class = "col1">
   <div class="blogposts">
-    <h3>Recent Blog Posts</h3>
+    <h1>Recent Blog Posts</h1>
     <ul>
       <% @posts.each do |post| %>
          <li><a href="<%= post.url %>">
@@ -12,12 +12,12 @@
            <span class="postdate"><%= post.date %> </span></a></li>
       <% end %>
     </ul>
-  </div>
 
-  <!-- Original from non paginate -->
-  <!-- <%# @posts.each do |post| %>
-    <%#= post.content %>
-  <%# end %> -->
+    <div class="downbutton">
+      <a href="#"><img src="/downarrow.png" alt="scrolldown"/></a>
+    </div>
+    
+  </div>
 
   <% @posts.each do |post| %>
     <%= post.content %>

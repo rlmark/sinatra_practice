@@ -15,4 +15,11 @@ $(document).ready( function () {
   //    $(this).css("font-size", "1em");
   //  });
 
+
+    $('a[href^="#"]').click(function (){
+      $('html, body').animate({scrollTop: $( $.attr(this, 'href') ).offset().top}, 900);
+      return false;
+    });
+
+
 });

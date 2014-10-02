@@ -7,7 +7,9 @@ class MyApp < Sinatra::Base
   before do
     # @posts = Post.all
     @posts = Post.most_recent(5)
+    # @posts = Post.pages(2)
     @time = Counter.all
+    @page=1
   end
 
   get "/" do

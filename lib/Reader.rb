@@ -24,15 +24,17 @@ class Post
     posts = all.sort_by { |post| post.date }
     # 2. This is first nth post objects.
     recent_n_posts = posts[n-n...n]#.reverse
-    # prior_n_posts = posts[n...n + n]
   end
 
-  def self.page_back(n)
-    # range_start = page * n - n
-    posts = all.sort_by { |post| post.date }
-    last_n_posts = posts[n-1...n+n] #[n...n + n]
-  end
+#this makes an array of arrays, each is a array object of desired grouping of  post objects
+  # def self.pages(n)
+  #   all.each_slice(n).to_a.unshift(0)
+  # end
 
+
+# range_start = page * n - n
+# posts = all.sort_by { |post| post.date }
+# last_n_posts = posts[n-1...n+n] #[n...n + n]
 
 # make a new method, take a page argument, page * 5 - n = start of range,
 

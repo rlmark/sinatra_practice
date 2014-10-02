@@ -136,6 +136,17 @@ nav ul li a:hover {
 /*         GENERAL PAGES          */
 /**********************************/
 
+/*Read more function*/
+/****************/
+.longtext {
+  overflow: hidden;
+  width: 100%;
+}
+
+a.readmore-js-toggle {
+  padding: 1em 0;
+  font-size: 1.2em;
+}
 
 p {
   font-family: 'Raleway', sans-serif;
@@ -176,6 +187,7 @@ h4 {
 
 a {
     text-decoration: none;
+    color: #C30062;
 }
 
 strong {

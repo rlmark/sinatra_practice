@@ -16,16 +16,16 @@
           </a></li>
       <% end %>
     </ul>
-
     <div class="downbutton">
-      <a href="#"><img src="/downarrow.png" alt="scrolldown"/></a>
+      <a href="#allposts"><img src="/downarrow.png" alt="scroll down"/></a>
     </div>
-
   </div>
 
+  <div id="allposts">
   <% @posts.each do |post| %>
     <%= post.content %>
   <% end %>
+  </div>
 
   <p>next</p>
   <p>back</p>

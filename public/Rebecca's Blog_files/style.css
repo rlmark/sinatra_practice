@@ -14,6 +14,11 @@ body {
 
 header {
   background-color: #60C7AD;
+  /*background-color: #00C3A5;*/
+  /*background: radial-gradient(circle at 2.00% 24.06%, #5aafc4, transparent 77%),
+  radial-gradient(circle at 34.28% 88.21%, #1da369, transparent 100%),
+  radial-gradient(circle at 97.58% 4.09%, #1d9186, transparent 100%),
+  radial-gradient(circle at 50% 50%, #ffffff, #ffffff 100%);*/
   width: 100%;
   height: 100vh;
 }
@@ -275,7 +280,7 @@ div.blogposts {
 }
 
 .blogposts li {
-  padding: 1em 30%;
+  padding: 1em 50%;
 }
 
 /*.blogpost a:hover {

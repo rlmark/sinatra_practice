@@ -2,17 +2,17 @@
   <img src="headshotsqr.jpg" alt="avatar"/>
 </div> -->
 
-<div class = "col1">
-  <div class="blogposts">
-    <div class="largename">
+<div class = "col1"> <!-- This is the bulk of the body -->
+  <div class="blogposts"> <!-- Div containing blogpost links -->
+    <div class="largename"> <!-- Div containing blogpost links -->
       <h1>Recent Blog Posts</h1>
     </div>
     <ul>
       <% @posts.each do |post| %>
          <li><a href="<%= post.url %>">
            <img src="<%= post.icon %>" alt="post icon" class = "icon"/>
-           <%= post.title.capitalize.gsub("Post", "Post ") %>
-           <span class="postdate"><%= post.date %> </span>
+           <br><%= post.title.capitalize.gsub("Post", "Post ") %>
+           <br><span class="postdate"><%= post.date %> </span>
           </a></li>
       <% end %>
     </ul>

@@ -61,8 +61,8 @@ header {
   background-color: white;
 }
 
-/*Scroll down*/
-/********/
+/*Scroll Down*/
+/*************/
 
 .downbutton img {
   height: 40px;
@@ -73,6 +73,7 @@ header {
     height: 40px;
     width: 40px;
     margin: 0 auto;
+    margin-bottom: 2em;
 }
 
 /*Footer*/
@@ -166,7 +167,7 @@ a.readmore-js-toggle {
 /**********/
 
 p {
-  font-family: 'Raleway', sans-serif;
+  /*font-family: 'Raleway', sans-serif;*/
   line-height: 21px;
 }
 
@@ -216,35 +217,22 @@ strong {
 /*         HOME/INDEX PAGE          */
 /************************************/
 
-/*.avatar img {
-  border-radius: 50%;
-  margin-top: -110px;
-  height: 150px;
-  width: 150px;
-  border: 10px solid white;
-  float: left;
-}*/
-
 div.col1 {
   width: 100%;
   margin-bottom: 50px;
 }
 
-.col1 h2:first-of-type {
-  padding: 0 0 0 15%;
-}
-
 div.blogposts {
   width: 100%;
   /*height: 100vh;*/
-  min-height: 875px;
+  min-height: 800px;
   background-color: #ADD3CE;
   padding-bottom: 2em;
   margin: 0 0 2em 0;
   }
 
 .largename {
-  padding: 3em 7em;
+  padding: 7em;
 }
 
 .blogposts h1 {
@@ -262,21 +250,20 @@ div.blogposts {
 }
 
 .icon {
-  height: 50px;
-  width: 50px;
+  height: 75px;
+  width: 75px;
 }
 
 .blogposts ul {
   list-style: none;
-  margin: 0;
+  width: 50%;
+  margin: 0 auto;
   padding: 0;
 }
 
 .blogposts li {
-  padding: 1em 10%;
+  padding: 1em;
   text-align: center;
+  display: inline-block;
+  margin-bottom: 6em;
 }
-
-/*.blogpost a:hover {
-  color: #C30062;
-}*/

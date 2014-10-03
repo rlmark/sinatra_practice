@@ -232,7 +232,7 @@ div.blogposts {
   }
 
 .largename {
-  padding: 7em;
+  padding: 5em;
 }
 
 .blogposts h1 {
@@ -252,12 +252,13 @@ div.blogposts {
 .icon {
   height: 75px;
   width: 75px;
+  padding: 0.5em;
 }
 
 .blogposts ul {
   list-style: none;
   width: 50%;
-  margin: 0 auto 5em auto;
+  margin: 0 auto 10em auto;
   padding: 0;
 }
 
@@ -265,5 +266,4 @@ div.blogposts {
   padding: 1em;
   text-align: center;
   display: inline-block;
-  margin-bottom: 6em;
 }

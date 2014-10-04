@@ -7,7 +7,7 @@
       <ul>
         <% @posts.each do |post| %>
            <li><a href="<%= post.url %>">
-             <img src="<%= post.icon %>" alt="post icon" class = "icon"/>
+             <img src="<%= post.icon %>" alt="post icon" class="icon"/>
              <br><%= post.title.capitalize.gsub("Post", "Post ") %>
              <br><span class="postdate"><%= post.date %> </span>
             </a></li>

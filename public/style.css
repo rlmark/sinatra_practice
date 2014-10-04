@@ -21,7 +21,7 @@ header {
 
 .bigtext {
   text-align: center;
-  margin: 22vh auto;
+  margin: 20vh auto;
   display: none;
 }
 
@@ -145,12 +145,12 @@ nav ul li a:hover {
   padding: 0;
 }
 
-/**********************************/
-/*         GENERAL PAGES          */
-/**********************************/
+/*****************************************/
+/*         ANIMATIONS/FUNCTIONS          */
+/*****************************************/
 
 /*Fade in up animation*/
-/********************/
+/**********************/
 
 .animated {
     -webkit-animation-duration: 1s;
@@ -186,6 +186,17 @@ nav ul li a:hover {
     animation-name: fadeInUp;
 }
 
+/*Post icon hover*/
+/*****************/
+
+.icon {
+  transition: all 0.5s ease;
+}
+
+.icon:hover {
+  transform: translateY(-15px);
+}
+
 /*Read more function*/
 /********************/
 
@@ -199,6 +210,10 @@ a.readmore-js-toggle {
   padding: 1em 8%;
   font-size: 1.2em;
 }
+
+/**********************************/
+/*         GENERAL PAGES          */
+/**********************************/
 
 /*Defaults*/
 /**********/

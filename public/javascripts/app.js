@@ -3,8 +3,7 @@ $(document).ready( function () {
     $('.longtext').readmore();
 
     $(window).scroll( function () {
-      console.log("This is working");
-      $("footer").css({visibility: "visible"});
+      $("footer").fadeIn("slow");
     });
 
   // PRACTICE

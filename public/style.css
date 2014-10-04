@@ -22,6 +22,7 @@ header {
 .bigtext {
   text-align: center;
   margin: 22vh auto;
+  display: none;
 }
 
 .col {
@@ -46,7 +47,7 @@ header {
 .bigtext:before {
   content: "";
   display: block;
-  margin: 55px auto -55px auto;
+  margin: 45px auto -40px auto;
   width: 60%;
   height: 1px;
   background-color: white;
@@ -55,7 +56,7 @@ header {
 .bigtext .tagline:before {
   content: "";
   display: block;
-  margin: 10px auto 10px auto;
+  margin: 15px auto 15px auto;
   width: 60%;
   height: 1px;
   background-color: white;

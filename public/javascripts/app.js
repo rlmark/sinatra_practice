@@ -1,8 +1,10 @@
 $(document).ready( function () {
 
-  if ( document.referrer === null || document.referrer.indexOf(window.location.hostname) < 0 ) {
+  if ( document.referrer == null || document.referrer.indexOf(window.location.hostname) < 0 ) {
     $('.bigtext').fadeIn("slow");
-};
+}
+  else
+    $('.bigtext').css({display: "block"});
 
   $('.longtext').readmore();
 

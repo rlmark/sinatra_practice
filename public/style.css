@@ -252,7 +252,7 @@ div.blogposts {
 .icon {
   height: 75px;
   width: 75px;
-  padding: 0.5em;
+  padding: 0 0.5em 1em 0.5em;
 }
 
 .blogposts ul {

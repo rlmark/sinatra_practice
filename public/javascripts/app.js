@@ -1,19 +1,30 @@
 $(document).ready( function () {
 
   //Fades in counter only on first visit to site, else no animation
-  if ( document.referrer == null || document.referrer.indexOf(window.location.hostname) < 0 ) {
+  if ( document.referrer === null || document.referrer.indexOf(window.location.hostname) < 0 ) {
     $('.bigtext').fadeIn("slow");
 }
   else
     $('.bigtext').css({display: "block"});
 
-  //Clips posts and allows user expand posts
+  //Clips posts and allows user to expand posts
   $('.longtext').readmore();
 
   //Fade in footer
+  // $(window).scroll( function () {
+  //   $("footer").fadeIn("slow");
+  // });
+
+  //Footer fades in when scrolling down, fades out at top.
   $(window).scroll( function () {
-    $("footer").fadeIn("slow");
-  });
+    if ( $(window).scrollTop() <= 0 ) {
+      $( 'footer' ).fadeOut("slow");
+    }
+    else
+      {
+      $("footer").fadeIn("slow");
+      }
+    });
 
   //All internal links get scroll animation
   $('a[href^="#"]').click(function (){

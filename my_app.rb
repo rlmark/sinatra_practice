@@ -5,8 +5,8 @@ class MyApp < Sinatra::Base
 
   # if you want to make @ post avail to all route handlers,
   before do
-    # @posts = Post.all
-    @posts = Post.most_recent(5)
+    @posts = Post.all
+    # @posts = Post.most_recent(5)
     @pages = Post.paginate(5)
     @time = Counter.all
     # @page=1

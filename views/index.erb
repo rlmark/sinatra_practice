@@ -5,19 +5,23 @@
         <h1>Recent Blog Posts</h1>
       </div>
       <ul>
-        <% @posts.each do |post| %>
-           <li><a href="<%= post.url %>">
-             <img src="<%= post.icon %>" alt="post icon" class="icon"/>
-             <br><%= post.title.capitalize.gsub("Post", "Post ") %>
-             <br><span class="postdate"><%= post.date %> </span>
-            </a></li>
+        <li><</li>
+        <% @pages.each_with_index do |slice, index| %>
+            <% slice.each do |page|  %>
+             <li class="<%=index%>"><a href="<%= page.url %>">
+               <img src="<%= page.icon %>" alt="page icon" class="icon"/>
+               <br><%= page.title.capitalize.gsub("Post", "Post ") %>
+               <br><span class="postdate"><%= page.date %> </span>
+              </a></li>
+            <% end %>
         <% end %>
+        <li>></li>
       </ul>
 
       <!-- <ul>
-        <% @pages[0].each do |page| %>
-          <%= page.content %>
-        <%end%>
+        <%# @pages[0].each do |page| %>
+          <%#= page.content %>
+        <%#end%>
       </ul> -->
 
       <div class="downbutton">
@@ -27,8 +31,10 @@
   </div>
 
   <div id="allposts">
-    <% @posts.each do |post| %>
-      <%= post.content %>
+    <% @pages.each do |slice| %>
+      <% slice.each do |page|%>
+        <%= page.content  %>
+      <% end %>
     <% end %>
   </div>
 

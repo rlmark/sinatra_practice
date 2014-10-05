@@ -109,6 +109,27 @@ footer .to_top img {
   /*padding-top: 10px;*/
 }
 
+.social-media-bar {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding-left: 7%;
+}
+
+.social-media-bar li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.social-media-bar li:first-child {
+  padding-left: 0;
+}
+
+.social-media {
+  height: 20px;
+  width: 20px;
+}
+
 footer a {
   color: white;
   margin-left: 7%;

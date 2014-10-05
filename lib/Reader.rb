@@ -25,6 +25,10 @@ class Post
     # 2. This is first nth post objects.
     recent_n_posts = posts[n-n...n]#.reverse
   end
+
+  def self.paginate(n)
+    all.each_slice(n).to_a.unshift(0)
+  end
 end
 
 

@@ -10,11 +10,6 @@ $(document).ready( function () {
   //Clips posts and allows user to expand posts
   $('.longtext').readmore();
 
-  //Fade in footer
-  // $(window).scroll( function () {
-  //   $("footer").fadeIn("slow");
-  // });
-
   //Footer fades in when scrolling down, fades out at top.
   $(window).scroll( function () {
     if ( $(window).scrollTop() <= 0 ) {

@@ -190,6 +190,10 @@ nav ul li a:hover {
 /*****************/
 
 .icon {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -313,9 +317,9 @@ div.blogposts {
 
 .blogposts ul {
   list-style: none;
-  width: 50%;
   margin: 0 auto 10em auto;
   padding: 0;
+  display: table;
 }
 
 .blogposts li {

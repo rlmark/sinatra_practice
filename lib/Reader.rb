@@ -27,7 +27,7 @@ class Post
   end
 
   def self.paginate(n)
-    all.each_slice(n).to_a.unshift(0)
+    all.each_slice(n).to_a#.unshift(0)
   end
 end
 

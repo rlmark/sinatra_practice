@@ -53,3 +53,11 @@
 [dir="rtl"] .slick-prev {right: -25px;left: auto;}
 [dir="rtl"] .slick-prev:before {content: "\2192";}
 [dir="rtl"] .slick-slide {float: right;}
+
+/*Rebeccas styling*/
+.slick-slide{
+  text-align: center;
+}
+.slick-slide img{
+  margin: 0 auto;
+}

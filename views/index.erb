@@ -4,9 +4,7 @@
       <div class="largename" > <!-- Div containing title and blogpost icons -->
         <h1>Recent Blog Posts</h1>
       </div>
-      <p id ="next">
-        NEXT
-      </p>
+
       <div class="moreposts">
         <% @posts.each do |page| %>
           <div>
@@ -16,28 +14,8 @@
                <br><span class="postdate"><%= page.date %> </span>
             </a>
           </div>
-
-
         <% end %>
-        <!-- <ul>
-          <li class="arrows"><</li>
-          <% @pages.each_with_index do |slice, index| %>
-              <% slice.each do |page|  %>
-               <li class="<%=index%>"><a href="<%= page.url %>">
-                 <img src="<%= page.icon %>" alt="page icon" class="icon"/>
-                 <br><%= page.title.capitalize.gsub("Post", "Post ") %>
-                 <br><span class="postdate"><%= page.date %> </span>
-                </a></li>
-              <% end %>
-          <% end %>
-          <li class="arrows">></li>
-        </ul> -->
       </div>
-      <!-- <ul>
-        <%# @pages[0].each do |page| %>
-          <%#= page.content %>
-        <%#end%>
-      </ul> -->
 
       <div class="downbutton">
         <a href="#allposts"><img src="/downarrow.png" alt="scroll down"/></a>

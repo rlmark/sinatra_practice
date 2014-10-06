@@ -20,7 +20,7 @@ $(document).ready( function () {
   $(window).scroll( function () {
     if ( $(window).scrollTop() <= 0 ) {
       $( 'footer' ).fadeOut("slow");
-      // $( ".social-media-bar li" ).show();
+      $( ".social-media-bar li" ).toggle();
     }
     else
       {

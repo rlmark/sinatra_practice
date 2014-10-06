@@ -170,6 +170,12 @@ nav ul li a:hover {
 /*         ANIMATIONS/FUNCTIONS          */
 /*****************************************/
 
+/*Blogpost animation for icons */
+
+.moreposts {
+  width: 800px;
+  margin: 0 auto;
+}
 /*Fade in up animation*/
 /**********************/
 

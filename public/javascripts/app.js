@@ -8,7 +8,13 @@ $(document).ready( function () {
     $('.bigtext').css({display: "block"});
 
   //Clips posts and allows user to expand posts
-  $('.longtext').readmore();
+  // $('.longtext').readmore();
+  if (window.location.pathname === '/') {
+    $('.longtext').readmore();
+  }
+  else {
+    $('.longtext').readmore('destroy');
+  }
 
   //Footer fades in when scrolling down, fades out at top.
   $(window).scroll( function () {
@@ -49,7 +55,6 @@ $(document).ready( function () {
   // else
   //   {console.log("This isn't working");}
   //
-  //rotating blogpost plugin
 
   // PRACTICE
   //   $("h2").css({color: "red"});

@@ -73,8 +73,7 @@ header {
 .downbutton {
     height: 40px;
     width: 40px;
-    margin: 0 auto;
-    margin-bottom: 2em;
+    margin: 120px auto 0 auto;
 }
 
 /*Footer*/
@@ -180,6 +179,7 @@ nav ul li a:hover {
 .moreposts a {
   margin: 0 auto;
 }
+
 /*Fade in up animation*/
 /**********************/
 
@@ -239,7 +239,6 @@ nav ul li a:hover {
   overflow: hidden;
   /*width: 100%;*/
   margin: 0 8% 2em 8%;
-  padding-bottom: 2em;
 }
 
 a.readmore-js-toggle {

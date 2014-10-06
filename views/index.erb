@@ -4,20 +4,35 @@
       <div class="largename" > <!-- Div containing title and blogpost icons -->
         <h1>Recent Blog Posts</h1>
       </div>
-      <ul>
-        <li><</li>
-        <% @pages.each_with_index do |slice, index| %>
-            <% slice.each do |page|  %>
-             <li class="<%=index%>"><a href="<%= page.url %>">
+      <p id ="next">
+        NEXT
+      </p>
+      <div class="moreposts">
+        <% @posts.each do |page| %>
+          <div>
+            <a href="<%= page.url %>">
                <img src="<%= page.icon %>" alt="page icon" class="icon"/>
                <br><%= page.title.capitalize.gsub("Post", "Post ") %>
                <br><span class="postdate"><%= page.date %> </span>
-              </a></li>
-            <% end %>
-        <% end %>
-        <li>></li>
-      </ul>
+            </a>
+          </div>
 
+
+        <% end %>
+        <!-- <ul>
+          <li class="arrows"><</li>
+          <% @pages.each_with_index do |slice, index| %>
+              <% slice.each do |page|  %>
+               <li class="<%=index%>"><a href="<%= page.url %>">
+                 <img src="<%= page.icon %>" alt="page icon" class="icon"/>
+                 <br><%= page.title.capitalize.gsub("Post", "Post ") %>
+                 <br><span class="postdate"><%= page.date %> </span>
+                </a></li>
+              <% end %>
+          <% end %>
+          <li class="arrows">></li>
+        </ul> -->
+      </div>
       <!-- <ul>
         <%# @pages[0].each do |page| %>
           <%#= page.content %>

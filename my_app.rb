@@ -12,6 +12,8 @@ class MyApp < Sinatra::Base
     # @page=1
   end
 
+# to turn off layut , layout: false
+
   get "/" do
     erb :index
   end

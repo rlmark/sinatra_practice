@@ -28,8 +28,28 @@ $(document).ready( function () {
       return false;
   });
 
+  //Carousel of images
+  $('.moreposts').slick({
+	  slidesToShow: 5,
+    slidesToScroll: 5,
+    arrows: true,
+    draggable: false
+	});
+
+
 });
 
+  // //Show only first five elements on home page
+  // if (window.location.pathname === '/') {
+  //   // console.log("I am at home page");
+  //   $(".0").show();
+  //   $(".arrows").show();
+  //   $(".1").css(display: "none" );
+  //   }
+  // else
+  //   {console.log("This isn't working");}
+  //
+  //rotating blogpost plugin
 
   // PRACTICE
   //   $("h2").css({color: "red"});

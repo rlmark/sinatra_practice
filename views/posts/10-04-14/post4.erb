@@ -1,13 +1,116 @@
 <div class="longtext">
   <div id="/icons/boxcss.png"></div>
-  <h2>4th post placeholder</h2>
+  <h2>Centering Elements using CSS and Divs</h2>
+
+  <p>Centering an element is one of those things which feels really inane, but in CSS it will make you want to tear out your hair. It’s also really tempting to slowly add random pixels to your margins so that your element has the illusion of being centered correctly, but then you end up with an element that has a margin-right of 580px and a margin-left of 853px and you have no idea why. I’ve been there. Don’t do that. Here are some handy tricks for centering elements in CSS. </p>
+
+  <p>Let’s say you want to center some text, like a title or paragraphs on your page. You can select the element in your css file and set the text-alignment to center, like so: </p>
+
+  <pre style="background:#fff;color:#3b3b3b"><span style="color:#7a7a7a">&lt;<span style="color:#016cff">h</span>1></span>This is a title<span style="color:#7a7a7a">&lt;/<span style="color:#016cff">h</span>1></span>
+
+<span style="color:#7a7a7a">&lt;<span style="color:#016cff">p</span>></span>This a paragraph<span style="color:#7a7a7a">&lt;/<span style="color:#016cff">p</span>></span>
+  </pre>
+
+  <p>The CSS: </p>
+
+  <pre style="background:#fff;color:#3b3b3b"><span style="color:#016cff">h1</span> {
+    <span style="color:#a535ae">text-align</span>: <span style="color:#b7734c">center</span>;
+  }
+
+<span style="color:#016cff">p</span> {
+  <span style="color:#a535ae">text-align</span>: <span style="color:#b7734c">center</span>;
+  }
+  </pre>
+
+  <p>Text-align will center text relative to it’s parent element. But what if your text is within a div which is not already centered? How might you center an element inside of a div?</p>
+
+  <p>This is the situation which comes up most often for me. Take a look at the two divs below, .bigdiv and .smalldiv. Bigdiv’s width is automatically 100% of the window, because it is a block element which is not nested inside any other constraining element, but .smalldiv has a width of 200px. Specifying the width of a block element allows us to manipulate it’s margins and center it. If we wanted .smalldiv to appear in the middle of .bigdiv, we would need to set the margins on on the left and right side to “auto” which is a way of saying, “given the width of the element, divide up the remaining space between the element and it’s container and then give the right and left margins the same value.”</p>
+
+  <p>The HTML:</p>
+
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#7a7a7a">&lt;<span style="color:#016cff">div</span> <span style="color:#963dff">class</span>=<span style="color:#666">"bigdiv"</span>></span>
+  <span style="color:#7a7a7a">&lt;<span style="color:#016cff">div</span> <span style="color:#963dff">class</span>=<span style="color:#666">"smalldiv"</span>></span>
+    <span style="color:#7a7a7a">&lt;<span style="color:#016cff">p</span>></span>Hey I'm in a div<span style="color:#7a7a7a">&lt;/<span style="color:#016cff">p</span>></span>
+  <span style="color:#7a7a7a">&lt;/<span style="color:#016cff">div</span>></span>
+<span style="color:#7a7a7a">&lt;/<span style="color:#016cff">div</span>></span>
+</pre>
+
+  <p>The CSS:</p>
+
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#963dff">.bigdiv</span> {
+  <span style="color:#a535ae">background-color</span>: <span style="color:#b7734c">red</span>;
+}
+
+<span style="color:#963dff">.smalldiv</span> {
+  <span style="color:#a535ae">background-color</span>: <span style="background:#900;color:#fff">lightblue</span>;
+  <span style="color:#a535ae">width</span>: <span style="color:#a8017e">200<span style="color:#069;font-weight:700">px</span></span>;
+  <span style="color:#a535ae">margin</span>: <span style="color:#a8017e">0</span> <span style="color:#b7734c">auto</span>;
+}
+</pre>
+
+  <p>Simple enough, Let’s try something more complex. Centering a horizontal list. An instance of when you might want to do this is in a header or footer. Check it out:</p>
+
+  <p>The HTML:</p>
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#7a7a7a">&lt;<span style="color:#016cff">ul</span> <span style="color:#963dff">class</span> = <span style="color:#666">"horizontal-nav"</span>></span>
+  <span style="color:#7a7a7a">&lt;<span style="color:#016cff">li</span>></span>Home<span style="color:#7a7a7a">&lt;/<span style="color:#016cff">li</span>></span>
+  <span style="color:#7a7a7a">&lt;<span style="color:#016cff">li</span>></span>Contact<span style="color:#7a7a7a">&lt;/<span style="color:#016cff">li</span>></span>
+  <span style="color:#7a7a7a">&lt;<span style="color:#016cff">li</span>></span>About<span style="color:#7a7a7a">&lt;/<span style="color:#016cff">li</span>></span>
+<span style="color:#7a7a7a">&lt;/<span style="color:#016cff">ul</span>></span>
+</pre>
+
+  <p>And the CSS:</p>
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#016cff">ul</span><span style="color:#963dff">.horizontal-nav</span> {
+  <span style="color:#a535ae">display</span>: table;
+  <span style="color:#a535ae">margin</span>: <span style="color:#a8017e">0</span> <span style="color:#b7734c">auto</span>;
+}
+
+<span style="color:#963dff">.horizontal-nav</span> <span style="color:#016cff">li</span> {
+  <span style="color:#a535ae">display</span>: <span style="color:#b7734c">inline-block</span>;
+  <span style="color:#a535ae">padding</span>: <span style="color:#a8017e">0</span> <span style="color:#a8017e">10<span style="color:#069;font-weight:700">px</span></span>;
+}
+</pre>
+
+  <p>The thing to note here is that you’re forcing the unordered list to display itself like a table. This is not generally recommended, because we should strive for a more semantic use of html elements, but in a pinch, it’s a very simple way of centering unordered list items.</p>
+
+  <p>Ok, so you can center text, divs within divs, and horizontal lists, but what if you have multiple elements in a row to center, like in a column layout. Here is a way to tackle that using percentages. First set up your HTML with one div which contains the elements you’d like to center in a row. In this case I’ve chosen to center three divs.</p>
+
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#7a7a7a">&lt;<span style="color:#016cff">div</span> <span style="color:#963dff">class</span>=<span style="color:#666">"invisiblehelper"</span>></span>
+  <span style="color:#7a7a7a">&lt;<span style="color:#016cff">div</span> <span style="color:#963dff">class</span>=<span style="color:#666">"column"</span>></span><span style="color:#7a7a7a">&lt;<span style="color:#016cff">p</span>></span>1<span style="color:#7a7a7a">&lt;/<span style="color:#016cff">p</span>></span><span style="color:#7a7a7a">&lt;/<span style="color:#016cff">div</span>></span>
+  <span style="color:#7a7a7a">&lt;<span style="color:#016cff">div</span> <span style="color:#963dff">class</span>=<span style="color:#666">"column"</span>></span><span style="color:#7a7a7a">&lt;<span style="color:#016cff">p</span>></span>2<span style="color:#7a7a7a">&lt;/<span style="color:#016cff">p</span>></span><span style="color:#7a7a7a">&lt;/<span style="color:#016cff">div</span>></span>
+  <span style="color:#7a7a7a">&lt;<span style="color:#016cff">div</span> <span style="color:#963dff">class</span>=<span style="color:#666">"column"</span>></span><span style="color:#7a7a7a">&lt;<span style="color:#016cff">p</span>></span>3<span style="color:#7a7a7a">&lt;/<span style="color:#016cff">p</span>></span><span style="color:#7a7a7a">&lt;/<span style="color:#016cff">div</span>></span>
+<span style="color:#7a7a7a">&lt;/<span style="color:#016cff">div</span>></span>
+
+</pre>
+
+  <p>The outer div is there solely to help position the inside divs. You can give it any width you’d like, either in percentages or pixels or ems, just make sure to set the margin to auto on the left and right.</p>
+
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#963dff">.invisiblehelper</span> {
+   <span style="color:#a535ae">width</span>: <span style="color:#a8017e">800<span style="color:#069;font-weight:700">px</span></span>;
+   <span style="color:#a535ae">margin</span>: <span style="color:#a8017e">0</span> <span style="color:#b7734c">auto</span>;
+  }
+</pre>
+
+  <p>Now for the columns. It might be tempting to set the columns’ display to inline-block and give each of them a percent width of 33.33333, but I can tell you from experience that this will not work. Inline-block elements take into account the whitespace surrounding elements (i.e. if you have a line break between divs like here) and so centering them with percents gets super frustrating. Were going to set their display to block and float them to the left of the containing element. This will get them all in a line, and the float won’t be too messy, I promise.</p>
+
+  <p>Let’s say we want our columns to have a margin of 1%, that means that each div’s margin is 1% * 2 sides, so 2% of the container’s width. Now we have 3 divs so 3 * 2% is 6% being taken up only by margins. Our columns’ widths will need to be (100% - 6% ) divided by 3 columns, which amounts to 31.333333%.</p>
+
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#963dff">.column</span> {
+  <span style="color:#a535ae">margin</span>: <span style="color:#a8017e">1<span style="color:#069;font-weight:700">%</span></span>;
+  <span style="color:#a535ae">width</span>: <span style="color:#a8017e">31.3333333333<span style="color:#069;font-weight:700">%</span></span>;
+  <span style="color:#a535ae">padding</span>: <span style="color:#a8017e">0</span>;
+  <span style="color:#a535ae">background-color</span>: <span style="background:#900;color:#fff">lightblue</span>;
+  <span style="color:#a535ae">display</span>: <span style="color:#b7734c">block</span>;
+  <span style="color:#a535ae">float</span>: <span style="color:#b7734c">left</span>;
+  }
+</pre>
+
+  <p>Now we have three perfectly centered elements, ready to be filled with whatever content you wish.</p>
+
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  for a live version of this code, check it out <a href="http://codepen.io/rlmark/pen/hodHA?editors=110">here</a>.
   </p>
+
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Happy coding!
   </p>
 </div>

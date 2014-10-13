@@ -8,7 +8,6 @@ $(document).ready( function () {
     $('.bigtext').css({display: "block"});
 
   //Clips posts and allows user to expand posts
-  // $('.longtext').readmore();
   if (window.location.pathname === '/') {
     $('.longtext').readmore();
   }
@@ -40,7 +39,6 @@ $(document).ready( function () {
     arrows: true,
     draggable: false
 	});
-
 
 });
 

@@ -60,8 +60,6 @@ end
   # From there, when user hits forward, page will display next 5.
 
 
-
-
 class Counter
   attr_accessor :minutes, :days, :weeks, :hours
 

@@ -1,11 +1,16 @@
 <div class="longtext">
   <div id="/icons/tbd.png"></div>
-  <h2>5th post placeholder</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
+  <h2>GET vs POST requests</h2>
+  <p>In the HTTP request-response cycle, two common requests your computer will make are GET and POST requests, but sometimes it can be confusing what is being posted or gotten, from whom, where? </p>
 
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
+  <p>Let’s say you are an average internet user. You’d like to do a search for information on corgi puppies. If you find a website you like in your search results, for example: http://dogtime.com/dog-breeds/pembroke-welsh-corgi, you can click on the link to navigate to the website. Congratulations, you’ve just made a GET request. The GET request is so named because your browser - “a.k.a. the client” - is making a request to GET information from the website’s server. The server then knows to send along the html content, styling, and interactivity for your visit. Every time you navigate to different pages within the website you are making separate GET requests to the server as well, so it’s not as if the entire site with all it’s links is made available to you all at once. </p>
+
+  <p>So, you’re on your website looking for more information about corgis, and you discover that they have a cool newsletter that you can sign up for. You decide to fill out your information and hit  “subscribe.” Your browser just made a POST request, sending along your inputs back to the server. One of the important things to note is that the content of your POST request can be seen in the url of your browser. </p>
+
+  <p>If I type in “Hello I like corgis” into google’s search bar I’ll see “https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=Hello+I+love+corgis”</p>
+
+  <p>When you’re working with params, you can grab this information and parse it for use, but more on that later. For now, just remember that when you’re staring at your routes page in Rails or Sinatra trying to get your website working, the GET request is from the perspective of the user, they’re getting info from the server, and the POST request sends info along from the user’s browser. </p>
+
+  <p>Happy coding! </p>
+
 </div>
